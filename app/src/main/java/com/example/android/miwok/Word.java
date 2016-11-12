@@ -5,22 +5,22 @@ package com.example.android.miwok;
  */
 
 public class Word {
-    private String mTextMiwok;
-    private String mTextEng;
+    private String mTextMiwok="";
+    private String mTextEng="";
     public Word(String miwok, String english){
-        this.mTextEng = english;
-        this.mTextMiwok = miwok;
+        this.mTextEng = english==null?"":english;
+        this.mTextMiwok = miwok==null?"":miwok;
     }
     public void setTextMiwok(String s){
         this.mTextMiwok = s;
     }
     public String getTextMiwok(){
-        return this.mTextMiwok;
+        return this.mTextMiwok==null?"":this.mTextMiwok;
     }
     public void setTextEng(String s){
         this.mTextEng = s;
     }
     public String getTextEng(){
-        return this.mTextEng;
+        return this.mTextEng==null?"":this.mTextEng;
     }
 }
