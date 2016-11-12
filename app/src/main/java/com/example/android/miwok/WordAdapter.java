@@ -2,6 +2,7 @@ package com.example.android.miwok;
 
 import android.app.Activity;
 import android.content.Context;
+import android.os.WorkSource;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +15,9 @@ import java.util.List;
  * Created by asus on 9/11/2016.
  */
 
-public class WordAdapter extends ArrayAdapter<String> {
+public class WordAdapter extends ArrayAdapter<Word> {
 
-    public WordAdapter(Context context, List<String> objects) {
+    public WordAdapter(Context context, List<Word> objects) {
         super(context, 0, objects);
     }
 
