@@ -61,4 +61,7 @@ public class Word {
         return this.mImageResourceId != Word.NO_IMAGE_RESOURCE;
     }
 
+    public int getImageResourceId() {
+        return this.mImageResourceId;
+    }
 }
