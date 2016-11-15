@@ -9,31 +9,28 @@ public class Word {
     private String mTextMiwok = "";
     private String mTextEng = "";
     private int mImageResourceId = Word.NO_IMAGE_RESOURCE;
+    private int mAudioResourceId;
 
     private final static int NO_IMAGE_RESOURCE = -1;
 
     /**
      * Contructor to receive 2 input of text,assume that there is no image resource
-     *
-     * @param miwok
-     * @param english
      */
-    public Word(String miwok, String english) {
+    public Word(String miwok, String english, int audioResourceId) {
         this.mTextEng = english == null ? "" : english;
         this.mTextMiwok = miwok == null ? "" : miwok;
         this.mImageResourceId = Word.NO_IMAGE_RESOURCE;
+        this.mAudioResourceId = audioResourceId;
     }
 
     /**
      * Contructor to receive 2 input of text,assume that there is no image resource
-     *
-     * @param miwok
-     * @param english
      */
-    public Word(String miwok, String english, int imageId) {
+    public Word(String miwok, String english, int imageId, int audioResourceId) {
         this.mTextEng = english == null ? "" : english;
         this.mTextMiwok = miwok == null ? "" : miwok;
         this.mImageResourceId = imageId > 0 ? imageId : Word.NO_IMAGE_RESOURCE;
+        this.mAudioResourceId = audioResourceId;
     }
 
     public void setTextMiwok(String s) {
@@ -63,5 +60,9 @@ public class Word {
 
     public int getImageResourceId() {
         return this.mImageResourceId;
+    }
+
+    public int getAudioResourceId() {
+        return this.mAudioResourceId;
     }
 }
